@@ -53,7 +53,7 @@ const MainScreen = ({navigation}) => {
           tension={50}
           friction={7}
           useNativeDriver
-          onPress={() => navigation.push('DetailScreen', {data: item})}
+          onPress={() => navigation.openDrawer()}
           >
 
           <SharedElement id={`item.${item.id}.photo`}>

@@ -1,7 +1,10 @@
 import React from 'react';
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
-
+import { MainStackNavigator } from "./navigation/StackNavigator";
+import BottomTabNavigator from "./navigation/TabNavigator";
+import DrawerNavigator from "./navigation/DrawerNavigator";
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 // Package
 import {createSharedElementStackNavigator} from 'react-navigation-shared-element';
 
@@ -13,6 +16,13 @@ const Stack = createSharedElementStackNavigator();
 
 const App = ({navigation}) => {
   return (
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <DrawerNavigator />
+        </NavigationContainer>
+      </SafeAreaProvider>
+  );
+  /* return (
     <NavigationContainer>
       <Stack.Navigator 
        initialRouteName="List" 
@@ -82,7 +92,7 @@ const App = ({navigation}) => {
         />
       </Stack.Navigator>
     </NavigationContainer>
-  );
+  ); */
 };
 
 export default App
