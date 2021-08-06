@@ -24,7 +24,8 @@ const MainScreen = ({navigation}) => {
       <View style={{marginTop: 40, marginBottom: 30,paddingHorizontal: 30, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
       <View>
       <Text style={{fontSize: 14,fontWeight: '700', color: 'orange', textTransform: 'uppercase'}}>{profile.date}</Text>
-        <Text style={{fontSize: 36, fontWeight: 'bold'}}>Blog</Text>
+        <Text style={{fontSize: 36, fontWeight: 'bold',
+      }}>Blog</Text>
       </View>
       <View>
         <Image source={{uri: profile.profilePic}} style={{width: 55, height: 55, borderRadius: 10}} />
@@ -67,7 +68,9 @@ const MainScreen = ({navigation}) => {
 
 
             <SharedElement id={`item.${item.id}.text`} style={{width:width - 90, position: 'absolute', bottom: 90, left: 10, paddingHorizontal: 10}}>
-              <Text style={{color: 'white', fontSize: 24, fontWeight: 'bold', lineHeight: 28}}>{item.title}</Text>
+              <Text style={{color: 'white', fontSize: 24, fontWeight: 'bold', lineHeight: 28, textShadowColor: 'rgba(0, 0, 0, 0.75)',
+  textShadowOffset: {width: -1, height: 1},
+  textShadowRadius: 10}}>{item.title}</Text>
             </SharedElement>
 
 

@@ -23,16 +23,25 @@ const App = ({navigation}) => {
         <Stack.Screen
           name="DetailScreen"
           component={DetailScreen}
-          options={navigation => ({
-            headerBackTitleVisible: false,
-            cardStyleInterpolator: ({current: {progress}}) => {
-              return {
-                cardStyle: {
-                  opacity: progress,
+          options={() => {
+            return {
+              gestureEnabled: false,
+              transitionSpec: {
+                open: {
+                  animation: 'timing',
+                  config: { duration: 500, delay: 1 },
                 },
-              };
-            },
-          })}
+                close: { animation: 'timing', config: { duration: 200 } },
+              },
+              cardStyleInterpolator: ({ current: { progress } }) => {
+                return {
+                  cardStyle: {
+                    opacity: progress,
+                  },
+                };
+              },
+            };
+          }}
           sharedElementsConfig={(route) => {
             const { data } = route.params;
             return [

@@ -60,10 +60,7 @@ const DetailScreen = props => {
      <SharedElement id={`item.${data.id}.text`} style={{ width: width - 30, marginBottom: 14}}>
         <Text style={{color: 'black', fontSize: 22,fontWeight: 'bold', lineHeight: 32}}>{data.title}</Text>
      </SharedElement>
-
-    <Text style={{fontSize: 14, lineHeight: 28, textAlign: 'justify', opacity: 0.5}}>Much less attention was paid to the president’s statement that sunlight might safeguard people from the virus. Supposing we hit the body with a tremendous — whether it’s ultraviolet or just very powerful light, Trump said. Supposing you brought the light inside the body, which you can do either through the skin or in some other way When it comes to potential Covid-19 reatments, the president’s speculations have been numerous and frequently misguided.</Text>    
-
-    <Text style={{fontSize: 14, lineHeight: 28, textAlign: 'justify', opacity: 0.5}}>But the idea that sunlight could counteract Covid-19, both inside and outside the body, is not all that far-fetched. Richard Weller, MD, is a dermatologist and sunlight researcher at the University of Edinburgh in the U.K. Weller says he’s looked at Covid-19 data in the United States, and that there seems to be a correlation between states that get a lot of sun and lower rates of death. “I think there are probably several pathways by which sunlight and sun exposure may exert beneficial effects he says.</Text>   
+      <Text style={{color: 'black', fontSize: 16,}}>{data.text}</Text>
 
     <View style={{marginVertical: 25, paddingBottom: 20, flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
         <TouchableOpacity style={{padding: 12, flexDirection: 'row', alignItems: 'center'}}>
